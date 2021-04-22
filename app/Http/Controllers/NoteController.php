@@ -103,7 +103,6 @@ class NoteController extends Controller
     public function destroy(int $id)
     {
         $note = Note::find($id);
-
         if ($note === null) {
             return response()->json([
                 'error' => 'Impossible to perform exclusion. The requested record does not exist'
@@ -111,7 +110,7 @@ class NoteController extends Controller
         }
 
         $note->delete();   
-        
+
         return response()->json([
             'message' => 'Record removed successfully.'
         ], 200);

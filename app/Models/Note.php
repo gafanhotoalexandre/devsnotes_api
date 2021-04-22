@@ -21,7 +21,8 @@ class Note extends Model
     public function feedback()
     {
         return [
-            'required' => 'O campo :attribute deve ser preenchido'
+            'title.required' => 'O campo de Título deve ser preenchido',
+            'body.required' => 'O campo da Mensagem deve ser preenchido'
         ];
     }
 }
